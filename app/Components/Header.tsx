@@ -1,16 +1,17 @@
-import Link from "next/link"
+import Link from "next/link";
+
 export default function Header(){
-
     return(
-        <header>
-           <link href="/cadastro" />
-            cadastro
-            <link/>
+        <header className="bg-slate-700 text-white p-2">
+           <Link href="/Cadastro"
+           className="m-5"
+           >
+                Cadastro          
+           </Link>
 
-            <link href = "/Funcionarios"/>
+           <Link href="/Funcionarios">
                 Funcionarios
-                <link/>
+           </Link>
         </header>
     )
-
 }

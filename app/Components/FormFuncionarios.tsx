@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import api from "../services/api"
 
 export default function FormFuncionario(){
     
@@ -13,15 +14,21 @@ export default function FormFuncionario(){
         e.preventDefault()
 
         try {
-            
+            const response = await api.post("/funcionarios",{
+                nome,
+                cargo,
+                salario:Number(salario)
+            })
+            alert("Funcionario cadastrado com sucesso")
         } catch (error) {
-            
+            alert("Erro ao cadastrar")
+            console.log(error)
         }
         
     }
     
     return(
-        <form>
+        <form onSubmit={cadastrar}>
             <h2>Cadastro de Funcionario</h2>
 
             <input type="text"
@@ -43,7 +50,7 @@ export default function FormFuncionario(){
             />
 
             <button>
-                
+                Cadastrar
             </button>
         </form>
     )
