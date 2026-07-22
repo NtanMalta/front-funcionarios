@@ -14,7 +14,7 @@ export default function FormFuncionario(){
         e.preventDefault()
 
         try {
-            const response = await api.post("/funcionarios",{
+            const response = await api.post("/funcionario",{
                 nome,
                 cargo,
                 salario:Number(salario)
