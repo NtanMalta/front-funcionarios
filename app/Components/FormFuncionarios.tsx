@@ -14,12 +14,15 @@ export default function FormFuncionario(){
         e.preventDefault()
 
         try {
-            const response = await api.post("/funcionario",{
+            const response = await api.post("/funcionarios",{
                 nome,
                 cargo,
                 salario:Number(salario)
             })
             alert("Funcionario cadastrado com sucesso")
+            setNome("")
+            setCargo("")
+            setSalario("")
         } catch (error) {
             alert("Erro ao cadastrar")
             console.log(error)

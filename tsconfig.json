@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/funcionarios/page.jsx", "app/beneficios/page.jsx"  ],
   "exclude": ["node_modules"]
 }
